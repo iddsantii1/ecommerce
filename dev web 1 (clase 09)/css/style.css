@@ -1,0 +1,285 @@
+body {
+  margin: 0;
+  padding: 0;
+  margin-top: 60px;
+}
+
+header {
+  background-color: blueviolet;
+  color: #fff;
+  padding: 12px;
+  margin-top: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+}
+
+header nav .logo {
+  font-weight: bold;
+  font-size: 24px;
+  margin-right: auto;
+}
+
+header nav .menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+header nav .menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+header nav .menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav .menu li {
+  margin-left: 10px;
+  margin-right: 30px;
+  margin-top: 4px;
+}
+
+header nav .menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+header nav .menu li a:hover {
+  color: #ffcc00;
+}
+
+.check {
+  opacity: 0;
+}
+
+@media (max-width: 530px) {
+  header nav .menu-toggle {
+    display: flex;
+  }
+  
+  header nav .menu {
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: blueviolet;
+    padding: 10px 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+  }
+  
+  header nav .menu li {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  header nav .menu li a {
+    color: #fff;
+    font-size: 20px;
+  }
+  
+  header nav #toggle-menu:checked ~ .menu {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
+  }
+}
+
+div {
+  font-weight: bold;
+}
+
+.container-img {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.box-img {
+  display: flex;
+  justify-content: center;
+}
+
+#Products {
+  text-align: left;
+  margin-left: 10px;
+  margin-bottom: 50px;
+  text-decoration: underline;
+}
+
+.container-img {
+  width: 100%;
+  max-width: 1100px;
+  margin-right: auto;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 250px;
+}
+
+.container-img .box-img figure {
+  width: 100%;
+  height: 100%;
+}
+
+.container-img .box-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container-img .box-img:nth-child(3) {
+  grid-column-start: span 2;
+}
+
+.principio {
+  margin-top: 50px;
+  opacity: 85%;
+  background-color: #212121;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 8%;
+}
+
+.container_principal {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 20px;
+}
+
+#Producto5 img {
+  height: 400px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px white;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  margin-top: 10px;
+}
+
+.card p {
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #888;
+  margin: 5px 0;
+}
+
+.btn {
+  margin-top: 10px;
+}
+
+.principio h1 {
+  text-decoration: underline;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.principio .info {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.principio img {
+  max-width: 100%;
+  display: block;
+  margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+  .container-img {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    margin: 0 auto;
+  }
+
+  .box-img {
+    display: flex;
+    justify-content: center;
+  }
+
+  .container_principal {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card {
+    width: 300px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-img {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .container_principal {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+#Contact {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+#Contact p {
+  margin: 10px 0;
+}
+
+#Contact i {
+  margin-right: 5px;
+}
+
+.mail, .phone {
+  font-weight: bold;
+}
